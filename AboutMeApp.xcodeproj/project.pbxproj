@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5085761A2BF23F720029E732 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508576192BF23F720029E732 /* WelcomeViewController.swift */; };
 		509550F82BE9359600373127 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509550F72BE9359600373127 /* AppDelegate.swift */; };
 		509550FA2BE9359600373127 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509550F92BE9359600373127 /* SceneDelegate.swift */; };
 		509550FC2BE9359600373127 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509550FB2BE9359600373127 /* LoginViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		508576192BF23F720029E732 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		509550F42BE9359600373127 /* AboutMeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AboutMeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		509550F72BE9359600373127 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		509550F92BE9359600373127 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				509550F72BE9359600373127 /* AppDelegate.swift */,
 				509550F92BE9359600373127 /* SceneDelegate.swift */,
 				509550FB2BE9359600373127 /* LoginViewController.swift */,
+				508576192BF23F720029E732 /* WelcomeViewController.swift */,
 				509550FD2BE9359600373127 /* Main.storyboard */,
 				509551002BE9359700373127 /* Assets.xcassets */,
 				509551022BE9359700373127 /* LaunchScreen.storyboard */,
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				509550FC2BE9359600373127 /* LoginViewController.swift in Sources */,
+				5085761A2BF23F720029E732 /* WelcomeViewController.swift in Sources */,
 				509550F82BE9359600373127 /* AppDelegate.swift in Sources */,
 				509550FA2BE9359600373127 /* SceneDelegate.swift in Sources */,
 			);
