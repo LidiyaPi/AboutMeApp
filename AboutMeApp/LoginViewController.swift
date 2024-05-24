@@ -7,18 +7,13 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+final class LoginViewController: UIViewController {
     
     @IBOutlet var userNameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
-    @IBOutlet var loginButton: UIButton!
     
-    let user = "1"
-    let password = "1"
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
+    private let user = "user"
+    private let password = "1"
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super .touchesBegan(touches, with: event)
@@ -41,26 +36,39 @@ class LoginViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let welcomeVC = segue.destination as? WelcomeViewController
-        welcomeVC?.userName = userNameTF.text
+        if let userName = userNameTF.text, !userName.isEmpty {
+            welcomeVC?.userName = user
+        }
     }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
-        userNameTF.text = " "
-        passwordTF.text = " "
-    }
-
-//    @IBOutlet var forgotNameTapped: UILabel! {
-//        
-//    }
-//    
-//    @IBOutlet var forgotPasswordTapped: UILabel! {
-//        showAlert(title: "Oops!", message: "Your name is \(user) 😉")
-//    }
+        userNameTF.text = ""
+        passwordTF.text = ""    }
     
     @IBAction func loginButtonTap(_ sender: Any) {
     }
     
+    @IBAction func forgotUserNameTapped(_ sender: Any) {
+        let alertController = UIAlertController(
+            title: "Oops!",
+            message: "Your name is \(user)",
+            preferredStyle: .alert
+        )
+        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(alertController, animated: true, completion: nil)
+    }
     
-    
+    @IBAction func forgotPasswordTapped(_ sender: Any) {
+        let alertController = UIAlertController(
+            title: "Oops!",
+            message: "Your password is \(password)",
+            preferredStyle: .alert
+        )
+        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(alertController, animated: true, completion: nil)
+    }
 }
+
+
+
 

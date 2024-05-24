@@ -36,11 +36,10 @@
                                         <rect key="frame" x="0.0" y="128" width="256" height="34.5"/>
                                         <color key="backgroundColor" name="AccentColor"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Log in">
+                                        <buttonConfiguration key="configuration" style="plain" title="Log in" cornerStyle="large">
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="loginButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5I7-mf-1QV"/>
                                             <segue destination="NuB-bm-tI5" kind="presentation" modalPresentationStyle="fullScreen" id="hvH-zZ-aGV"/>
                                         </connections>
                                     </button>
@@ -87,7 +86,6 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="loginButton" destination="h5I-ax-j8c" id="9P0-YE-V4N"/>
                         <outlet property="passwordTF" destination="c4P-Sk-m1Y" id="DYe-k0-iR0"/>
                         <outlet property="userNameTF" destination="Lld-3L-23y" id="DXd-bo-ULp"/>
                     </connections>
@@ -104,8 +102,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Welcome" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nhM-ji-gyn">
-                                <rect key="frame" x="79" y="165" width="164" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nhM-ji-gyn">
+                                <rect key="frame" x="109.5" y="118" width="101" height="31"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <color key="textColor" systemColor="systemGroupedBackgroundColor"/>
                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -124,6 +122,12 @@
                                     <segue destination="FqB-M5-nhZ" kind="unwind" unwindAction="unwindFor:" id="Jrn-jL-dBW"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="👋" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XVK-1D-lFk">
+                                <rect key="frame" x="128.5" y="181" width="63" height="70"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="58"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="q4f-vT-rnH"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -132,6 +136,8 @@
                             <constraint firstItem="nhD-mb-2Ju" firstAttribute="centerX" secondItem="q4f-vT-rnH" secondAttribute="centerX" id="FvR-up-baT"/>
                             <constraint firstItem="nhM-ji-gyn" firstAttribute="centerX" secondItem="q4f-vT-rnH" secondAttribute="centerX" id="QIz-ao-Bqo"/>
                             <constraint firstItem="nhD-mb-2Ju" firstAttribute="centerY" secondItem="q4f-vT-rnH" secondAttribute="centerY" id="aHf-3x-Any"/>
+                            <constraint firstItem="XVK-1D-lFk" firstAttribute="centerX" secondItem="q4f-vT-rnH" secondAttribute="centerX" id="b3I-q0-sTD"/>
+                            <constraint firstItem="XVK-1D-lFk" firstAttribute="top" secondItem="nhM-ji-gyn" secondAttribute="bottom" constant="32" id="s2c-5G-s1q"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="PpE-W4-Otx"/>
@@ -150,19 +156,19 @@
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="opaqueSeparatorColor">
-            <color red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray6Color">
-            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGroupedBackgroundColor">
-            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPurpleColor">
-            <color red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
