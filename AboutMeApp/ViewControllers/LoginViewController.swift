@@ -11,9 +11,11 @@ final class LoginViewController: UIViewController {
     
     @IBOutlet var userNameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
-    
-    private let user = "user"
-    private let password = "1"
+
+//    private let login = "1"
+//    private let password = "1"
+    private let person = User.getUserInfo()
+
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super .touchesBegan(touches, with: event)
@@ -21,7 +23,7 @@ final class LoginViewController: UIViewController {
     }
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        guard userNameTF.text == user, passwordTF.text == password else {
+        guard userNameTF.text == person.login, passwordTF.text == person.password else {
             let alertController = UIAlertController(
                 title: "Invalid Login or Password",
                 message: "Please enter correct login and password",
@@ -37,21 +39,22 @@ final class LoginViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let welcomeVC = segue.destination as? WelcomeViewController
         if let userName = userNameTF.text, !userName.isEmpty {
-            welcomeVC?.userName = user
+            welcomeVC?.userName = person.login
         }
     }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
         userNameTF.text = ""
-        passwordTF.text = ""    }
-    
-    @IBAction func loginButtonTap(_ sender: Any) {
+        passwordTF.text = ""
     }
+    
+//    @IBAction func loginButtonTap(_ sender: Any) {
+//    }
     
     @IBAction func forgotRegisterData(_ sender: UIButton) {
         sender.tag == 0
-        ? showAlert(title: "Oops!", message: "Your name is \(user)")
-        : showAlert(title: "Oops!", message: "Your password is \(password)")
+        ? showAlert(title: "Oops!", message: "Your name is \(person.login)")
+        : showAlert(title: "Oops!", message: "Your password is \(person.password)")
     }
   
     
