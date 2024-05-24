@@ -48,25 +48,41 @@ final class LoginViewController: UIViewController {
     @IBAction func loginButtonTap(_ sender: Any) {
     }
     
-    @IBAction func forgotUserNameTapped(_ sender: Any) {
-        let alertController = UIAlertController(
-            title: "Oops!",
-            message: "Your name is \(user)",
-            preferredStyle: .alert
-        )
-        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        present(alertController, animated: true, completion: nil)
+    @IBAction func forgotRegisterData(_ sender: UIButton) {
+        sender.tag == 0
+        ? showAlert(title: "Oops!", message: "Your name is \(user)")
+        : showAlert(title: "Oops!", message: "Your password is \(password)")
+    }
+  
+    
+    private func showAlert(title: String, message: String, textField: UITextField? = nil) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default) {_ in
+            textField?.text = ""
+        }
+        alert.addAction(okAction)
+        present(alert, animated: true)
     }
     
-    @IBAction func forgotPasswordTapped(_ sender: Any) {
-        let alertController = UIAlertController(
-            title: "Oops!",
-            message: "Your password is \(password)",
-            preferredStyle: .alert
-        )
-        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        present(alertController, animated: true, completion: nil)
-    }
+//    @IBAction func forgotUserNameTapped(_ sender: Any) {
+//        let alertController = UIAlertController(
+//            title: "Oops!",
+//            message: "Your name is \(user)",
+//            preferredStyle: .alert
+//        )
+//        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+//        present(alertController, animated: true, completion: nil)
+//    }
+//    
+//    @IBAction func forgotPasswordTapped(_ sender: Any) {
+//        let alertController = UIAlertController(
+//            title: "Oops!",
+//            message: "Your password is \(password)",
+//            preferredStyle: .alert
+//        )
+//        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+//        present(alertController, animated: true, completion: nil)
+//    }
 }
 
 
