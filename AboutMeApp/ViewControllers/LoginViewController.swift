@@ -12,15 +12,22 @@ final class LoginViewController: UIViewController {
     @IBOutlet var userNameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
     
-    private let person = User.getUserInfo()
-
+    private let user = User.getUserInfo()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        userNameTF.text = user.login
+        passwordTF.text = user.password
+    }
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.addVerticalGradientLayer()
         super .touchesBegan(touches, with: event)
         self.view.endEditing(true)
     }
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        guard userNameTF.text == person.login, passwordTF.text == person.password else {
+        guard userNameTF.text == user.login, passwordTF.text == user.password else {
             let alertController = UIAlertController(
                 title: "Invalid Login or Password",
                 message: "Please enter correct login and password",
@@ -34,11 +41,18 @@ final class LoginViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let welcomeVC = segue.destination as? WelcomeViewController
-        if let userName = userNameTF.text, !userName.isEmpty {
-            welcomeVC?.userName = person.login
+        guard let tabBar = segue.destination as? TabBarViewController else {
+            return
         }
+        tabBar.user = user
     }
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        let welcomeVC = segue.destination as? WelcomeViewController
+//        if let userName = userNameTF.text, !userName.isEmpty {
+//            welcomeVC?.userName = person.login
+//        }
+//    }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
         userNameTF.text = ""
@@ -47,8 +61,8 @@ final class LoginViewController: UIViewController {
     
     @IBAction func forgotRegisterData(_ sender: UIButton) {
         sender.tag == 0
-        ? showAlert(title: "Oops!", message: "Your name is \(person.login)")
-        : showAlert(title: "Oops!", message: "Your password is \(person.password)")
+        ? showAlert(title: "Oops!", message: "Your name is \(user.login)")
+        : showAlert(title: "Oops!", message: "Your password is \(user.password)")
     }
   
     

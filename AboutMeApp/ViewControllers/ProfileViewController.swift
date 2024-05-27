@@ -17,21 +17,20 @@ class ProfileViewController: UIViewController {
     @IBOutlet var company: UILabel!
     @IBOutlet var position: UILabel!
     
-    private let person = User.getUserInfo()
+    var user: User!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.addVerticalGradientLayer()
+        navigationItem.backButtonTitle = (user.person.name + " " + user.person.surname)
         profileImage.layer.cornerRadius = 75
-        fullName.text = (person.person.name + " " + person.person.surname)
-        name.text = "Имя: \(person.person.name)"
-        surname.text = "Фамилия: \(person.person.surname)"
-        age.text = "Возраст: \(String(person.person.age))"
-        company.text = "Компания: \(person.person.company)"
-        position.text = "Должность\(person.person.position)"
+                fullName.text = (user.person.name + " " + user.person.surname)
+                name.text = "Имя: \(user.person.name)"
+                surname.text = "Фамилия: \(user.person.surname)"
+                age.text = "Возраст: \(String(user.person.age))"
+                company.text = "Компания: \(user.person.company)"
+                position.text = "Должность: \(user.person.position)"
     }
-    
-
-
-    }
+}
 
 

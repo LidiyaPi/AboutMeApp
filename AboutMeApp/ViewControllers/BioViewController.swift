@@ -16,7 +16,9 @@ class BioViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        fullName.text = (person.person.name + " " + person.person.surname + " " + "Bio")
+        view.addVerticalGradientLayer()
+//        navigationItem.backBarButtonItem?.title = "KLSJDFNLKSNGKLNLKS"
+        fullName.text = ((person.person.name ?? "") + " " + person.person.surname + " " + "Bio")
         biography.text = person.person.bio
     }
     

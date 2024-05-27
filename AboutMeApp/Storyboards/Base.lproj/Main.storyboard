@@ -151,7 +151,7 @@
                     </tabBarItem>
                     <navigationItem key="navigationItem" id="PpE-W4-Otx"/>
                     <connections>
-                        <outlet property="nameLabel" destination="nhM-ji-gyn" id="WUM-d6-D9J"/>
+                        <outlet property="welcomeUser" destination="nhM-ji-gyn" id="XJC-lY-CLv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eys-zC-LM3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -208,9 +208,10 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="1" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" image="brain.head.profile" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="q93-ke-KGD">
-                                <rect key="frame" x="85" y="148" width="150" height="152"/>
-                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="1" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" image="person.crop.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="q93-ke-KGD">
+                                <rect key="frame" x="85" y="149.5" width="150" height="149"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                <color key="tintColor" systemColor="systemOrangeColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="BaF-C9-A3m"/>
                                     <constraint firstAttribute="width" constant="150" id="FKh-Af-SOb"/>
@@ -230,7 +231,7 @@
                             <constraint firstItem="mdm-Zm-Xzk" firstAttribute="leading" secondItem="BfQ-Zy-eBn" secondAttribute="leading" constant="32" id="sCc-K0-qFh"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="Eqx-0p-lfP">
+                    <navigationItem key="navigationItem" id="Eqx-0p-lfP">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="Sdl-pO-ost">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="ASV-ki-BRp">
                                 <rect key="frame" x="229" y="4.5" width="75" height="35"/>
@@ -273,11 +274,10 @@
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="3vi-aP-1cq">
                                 <rect key="frame" x="32" y="144" width="256" height="343"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud nscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <textInputTraits key="textInputTraits"/>
                             </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="aYY-aT-aQW"/>
@@ -301,10 +301,10 @@
             </objects>
             <point key="canvasLocation" x="4050" y="895.77464788732391"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tab Bar View Controller-->
         <scene sceneID="5Th-CD-vit">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Fv0-pO-HOb" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Fv0-pO-HOb" customClass="TabBarViewController" customModule="AboutMeApp" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="FpR-7n-7Mf">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="49"/>
@@ -332,7 +332,7 @@
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Hxt-HQ-sf1">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -349,7 +349,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="brain.head.profile" catalog="system" width="120" height="128"/>
         <image name="house.fill" catalog="system" width="128" height="104"/>
         <image name="person.crop.circle.fill" catalog="system" width="128" height="123"/>
         <namedColor name="AccentColor">
@@ -359,25 +358,25 @@
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="opaqueSeparatorColor">
-            <color red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray6Color">
-            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGroupedBackgroundColor">
-            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPurpleColor">
-            <color red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

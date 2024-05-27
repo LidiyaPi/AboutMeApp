@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		505D923A2C01D734003473AD /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505D92392C01D734003473AD /* ProfileViewController.swift */; };
 		505D923C2C01EDB4003473AD /* BioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505D923B2C01EDB4003473AD /* BioViewController.swift */; };
+		505D923F2C021A74003473AD /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505D923E2C021A74003473AD /* TabBarViewController.swift */; };
 		507C87512C008BE000CC4493 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507C87502C008BE000CC4493 /* UserModel.swift */; };
 		5085761A2BF23F720029E732 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508576192BF23F720029E732 /* WelcomeViewController.swift */; };
 		509550F82BE9359600373127 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509550F72BE9359600373127 /* AppDelegate.swift */; };
@@ -22,6 +23,7 @@
 /* Begin PBXFileReference section */
 		505D92392C01D734003473AD /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		505D923B2C01EDB4003473AD /* BioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BioViewController.swift; sourceTree = "<group>"; };
+		505D923E2C021A74003473AD /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		507C87502C008BE000CC4493 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		508576192BF23F720029E732 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		509550F42BE9359600373127 /* AboutMeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AboutMeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -52,6 +54,7 @@
 				508576192BF23F720029E732 /* WelcomeViewController.swift */,
 				505D92392C01D734003473AD /* ProfileViewController.swift */,
 				505D923B2C01EDB4003473AD /* BioViewController.swift */,
+				505D923E2C021A74003473AD /* TabBarViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -182,6 +185,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				505D923F2C021A74003473AD /* TabBarViewController.swift in Sources */,
 				505D923C2C01EDB4003473AD /* BioViewController.swift in Sources */,
 				505D923A2C01D734003473AD /* ProfileViewController.swift in Sources */,
 				509550FC2BE9359600373127 /* LoginViewController.swift in Sources */,
